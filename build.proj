@@ -83,7 +83,8 @@
       StandardOutputImportance="Low"
       Command="&quot;$(NuGetToolPath)&quot; install Microsoft.DotNet.BuildTools -Prerelease -NoCache -Version $(BuildToolsVersion) -o &quot; $(PackagesDir) &quot; $(NuGetConfigCommandLine)" />
 
-    <!-- Copy build tools to tools directory -->
+    <!-- Copy build tools to tools directory  -->
+        <!-- Copy build tools to tools directory  -->
     <Exec
       Command="xcopy /e /y &quot;$(PackagesDir)Microsoft.DotNet.BuildTools.$(BuildToolsVersion)\lib\*&quot; &quot;$(ToolsDir)&quot; > &quot;$(ToolsDir)BuildTools.xcopy.log&quot;" />
   </Target>
